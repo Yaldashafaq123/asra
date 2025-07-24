@@ -1,0 +1,100 @@
+@keyframes slide1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/*About Us*/
+.loGO-slide{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+.loGO-slide h1{
+    font-size: 25px;
+    margin: 10px;
+}
+.logos {
+   margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%; 
+}
+
+.logo-slide {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide1 15s linear infinite;
+}
+.logo-slide:hover{
+    animation-play-state: paused;
+}
+.logo-slide img {
+    height: 100px;
+    margin: 0 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.logo-slide img:hover{
+    border-radius: 10px;
+    
+}
+.logo-slide.duplicate {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+/*test*/
+.row4{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    flex-wrap: wrap; /* Added this for responsiveness */
+}
+.test{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.test-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin: 20px;
+    text-align: right;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; /* Centering content horizontally */
+    align-items: center; /* Centering content vertically */
+}
+.test-col img{
+    height: 100px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+/* Media Query for small screens */
+@media (max-width: 700px) {
+    .row4 {
+        flex-direction: column; /* Stacking columns vertically on small screens */
+    }
+    .test-col {
+        flex-basis: 100%; /* Ensures each column takes full width */
+        text-align: center; /* Centers text on smaller screens */
+        margin: 10px; /* Reduces margin for better spacing */
+    }
+    .test-col img {
+        margin-left: 0;
+        margin-right: 0;
+        width: 80px; /* Reduces image size on smaller screens */
+    }
+}
